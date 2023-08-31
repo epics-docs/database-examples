@@ -1,0 +1,37 @@
+
+# This mmbo record will select which "piece" of seq will be processed
+record(mbbo, "CHOOSE") {
+    field(VAL,  "0")
+    field(FLNK, "SEQ")
+}
+
+record(seq, "SEQ") {
+    field(SELM, "Specified")
+    # here we indicate the mbbo record as the selector
+    field(SELL, "CHOOSE")
+    # Depending on the choice a different PV will be set to RESULT PV
+    field(DOL0, "VAL0")
+    field(DOL1, "VAL1")
+    field(DOL2, "VAL2")
+    field(LNK0, "RESULT")
+    field(LNK1, "RESULT")
+    field(LNK2, "RESULT")
+    # After setting the value the RESULT PV should be processed
+    field(FLNK, "RESULT")
+}
+
+record(ai, "VAL0") {
+    field(VAL, "0")
+}
+
+record(ai, "VAL1") {
+    field(VAL, "2")
+}
+
+record(ai, "VAL2") {
+    field(VAL, "3")
+}
+
+record(ai, "RESULT") {
+    field(VAL, "0")
+}
