@@ -27,3 +27,9 @@ $EPICS_BIN/caget MYRECORD.DRVL
 $EPICS_BIN/caget MYRECORD.DRVH
 # you should get the value 10
 ```
+
+## Files
+
+* [example1_1.db](example1_1.db)
+* [example1_2.db](example1_2.db)
+* [example1.cmd](example1.cmd)
