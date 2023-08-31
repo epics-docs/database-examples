@@ -1,7 +1,7 @@
 # README
 
 This repository aims to collect examples of EPICS Databases to help newcomers
-(or not so new) get an idea on who to use different records.
+(or not so new) get an idea on how to use different records.
 
 The repository is organized on the follow way:
 * Each folder has one example
