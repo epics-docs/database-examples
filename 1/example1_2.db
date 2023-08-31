@@ -1,0 +1,6 @@
+# this definition will set the fields DRVL and DRVH that weren't defined on 
+# original file (example1_1.db)
+record("*", "MYRECORD"){
+    field(DRVL, "0")
+    field(DRVH, "10")
+}

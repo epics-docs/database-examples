@@ -11,8 +11,9 @@ were added
 * Each example should have at least :
     * README.md
     * database file
-* This README should work as a index, with the current list of all examples
+* This README should work as an index, with the current list of all examples
 
 ## List of examples
 
 0. [Simple selector using seq and mbbo](0/)
+1. [Overwritting a record field using '*'](1/)

@@ -1,0 +1,4 @@
+# This is an example of an initial record definition
+record(ao, "MYRECORD"){
+    field(DESC, "My record")
+}
