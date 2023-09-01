@@ -17,3 +17,4 @@ were added
 
 0. [Simple selector using seq and mbbo](0/)
 1. [Overwritting a record field using '*'](1/)
+2. [Simple counter using calc](2/)
