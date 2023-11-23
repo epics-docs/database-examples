@@ -1,0 +1,62 @@
+record (ao, "DUTY_CYC_TIM1") {
+  field (DESC, "duty cycle time 1")
+  field (EGU, "s")
+  field (VAL, "10")
+  field (SCAN, "Passive")
+}
+
+record (ao, "DUTY_CYC_TIM2") {
+  field (DESC, "duty cycle time 2")
+  field (EGU, "s")
+  field (VAL, "20")
+  field (SCAN, "Passive")
+}
+
+record (calcout, "DUTY_CYC1") {
+  field (DESC, "duty cycled counter 1")
+  field (EGU, "s")
+  field (CALC, "VAL-1")
+  field (OUT, "DUTY_RESET2 PP")
+  field (OOPT, "Transition To Zero")
+  field (SCAN, "1 second")
+}
+
+record (calcout, "DUTY_CYC2") {
+  field (DESC, "duty cycled output 2")
+  field (EGU, "s")
+  field (CALC, "VAL-1")
+  field (OUT, "DUTY_RESET1 PP")
+  field (OOPT, "Transition To Zero")
+  field (SCAN, "1 second")
+}
+
+record (calcout, "DUTY_RESET1") {
+  field (DESC, "reset cycle counter 1")
+  field (INPA, "DUTY_CYC_TIM1")
+  field (CALC, "A")
+  field (OUT, "DUTY_CYC1")
+  field (SCAN, "Passive")
+  field (PINI, "YES")
+  field (FLNK, "DUTY_ACT1")
+}
+
+record (calcout, "DUTY_RESET2") {
+  field (DESC, "reset cycle counter 2")
+  field (INPA, "DUTY_CYC_TIM2")
+  field (CALC, "A")
+  field (OUT, "DUTY_CYC2")
+  field (SCAN, "Passive")
+  field (FLNK, "DUTY_ACT2")
+}
+
+record (calcout, "DUTY_ACT1") {
+  field (DESC, "duty cycle action 1")
+  field (CALC, "VAL+1")
+  field (SCAN, "Passive")
+}
+
+record (calcout, "DUTY_ACT2") {
+  field (DESC, "duty cycle action 2")
+  field (CALC, "VAL+1")
+  field (SCAN, "Passive")
+}
