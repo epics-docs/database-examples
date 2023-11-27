@@ -12,7 +12,7 @@ EPICS base built.
 To test this example, you can start the ioc using this command:
 
 ``` bash
-$EPICS_BIN/softIocPVA -d example3.db
+$EPICS_BIN/softIocPVA -d example2.db
 ```
 
 And then on a different terminal with , you can do like that:
@@ -26,4 +26,4 @@ $EPICS_BIN/camonitor COUNTER
 
 ## Files
 
-* [example3.db](example3.db)
+* [example2.db](example2.db)
