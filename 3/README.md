@@ -42,4 +42,4 @@ $EPICS_BIN/caput DUTY_TIM2 37
 
 ## Files
 
-* [example3.db](example4.db)
+* [example3.db](example3.db)
